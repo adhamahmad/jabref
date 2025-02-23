@@ -210,5 +210,4 @@ public class JournalAbbreviationsTab extends AbstractPreferenceTabView<JournalAb
     public String getTabName() {
         return Localization.lang("Journal abbreviations");
     }
-
 }

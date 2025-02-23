@@ -119,7 +119,7 @@ public class JournalAbbreviationsTabViewModel implements PreferenceTabViewModel 
         selectLastJournalFile();
         addBuiltInList();
 
-        directoryPath.set( abbreviationsPreferences.getJournalAbbreviationDir());
+        directoryPath.set(abbreviationsPreferences.getJournalAbbreviationDir());
     }
 
     /**
@@ -251,6 +251,7 @@ public class JournalAbbreviationsTabViewModel implements PreferenceTabViewModel 
             }
         }
     }
+
     public void addAbbreviation(Abbreviation abbreviationObject) {
         AbbreviationViewModel abbreviationViewModel = new AbbreviationViewModel(abbreviationObject);
         if (abbreviations.contains(abbreviationViewModel)) {
@@ -424,7 +425,6 @@ public class JournalAbbreviationsTabViewModel implements PreferenceTabViewModel 
     public SimpleBooleanProperty useFJournalProperty() {
         return useFJournal;
     }
-
 
     public StringProperty directoryPathProperty() {
         return directoryPath;

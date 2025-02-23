@@ -74,7 +74,6 @@ public class JournalAbbreviationLoader {
     }
 
     public static JournalAbbreviationRepository loadBuiltInRepository() {
-        return loadRepository(new JournalAbbreviationPreferences(Collections.emptyList(), true, new SimpleStringProperty(Directories.getJournalAbbreviationsDirectory().toString() )));
+        return loadRepository(new JournalAbbreviationPreferences(Collections.emptyList(), true, new SimpleStringProperty(Directories.getJournalAbbreviationsDirectory().toString())));
     }
-
 }

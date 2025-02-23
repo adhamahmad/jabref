@@ -677,9 +677,8 @@ public class JabRefCliPreferences implements CliPreferences {
 
         // endregion
 
-        //Journal abbreviations directory
-        defaults.put(JOURNAL_ABBREVIATION_DIRECTORY,Directories.getJournalAbbreviationsDirectory().toString());
-
+        // Journal abbreviations directory
+        defaults.put(JOURNAL_ABBREVIATION_DIRECTORY, Directories.getJournalAbbreviationsDirectory().toString());
     }
 
     public void setLanguageDependentDefaultValues() {

@@ -28,7 +28,7 @@ public class JournalAbbreviationPreferences {
                                           StringProperty journalsDir) {
 
         if (journalsDir == null || journalsDir.get() == null) {
-            this.journalsDir = new SimpleStringProperty( Directories.getJournalAbbreviationsDirectory().toString() ); // default directory
+            this.journalsDir = new SimpleStringProperty(Directories.getJournalAbbreviationsDirectory().toString()); // default directory
         } else {
             this.journalsDir = journalsDir;
         }
@@ -36,7 +36,6 @@ public class JournalAbbreviationPreferences {
         this.journalsDir.addListener((observable, oldValue, newValue) -> {
             updateJournalsDir(newValue);
         });
-
 
         this.externalJournalLists = FXCollections.observableArrayList(externalJournalLists);
         this.useFJournalField = new SimpleBooleanProperty(useFJournalField);
@@ -70,9 +69,7 @@ public class JournalAbbreviationPreferences {
             if (!Files.exists(customCsv)) {
                 Files.createFile(customCsv);
             }
-
-        } catch (
-                IOException e) {
+        } catch (IOException e) {
             LOGGER.error("Failed to create journal abbreviation directory", e);
         }
     }
@@ -105,9 +102,10 @@ public class JournalAbbreviationPreferences {
         return journalsDir.get();
     }
 
-    public StringProperty journalAbbreviationDirectoryProperty(){
+    public StringProperty journalAbbreviationDirectoryProperty() {
         return journalsDir;
     }
+
     public void setJournalAbbreviationDir(String journalsDir) {
         this.journalsDir.set(journalsDir);
     }
