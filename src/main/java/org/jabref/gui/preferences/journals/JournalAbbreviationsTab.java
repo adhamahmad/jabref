@@ -68,8 +68,6 @@ public class JournalAbbreviationsTab extends AbstractPreferenceTabView<JournalAb
 
     private Timeline invalidateSearch;
 
-
-
     public JournalAbbreviationsTab() {
         ViewLoader.view(this)
                   .root(this)
@@ -212,6 +210,5 @@ public class JournalAbbreviationsTab extends AbstractPreferenceTabView<JournalAb
     public String getTabName() {
         return Localization.lang("Journal abbreviations");
     }
-
 
 }

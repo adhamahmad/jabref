@@ -373,7 +373,6 @@ public class JournalAbbreviationsTabViewModel implements PreferenceTabViewModel 
                     abbreviationsPreferences.setUseFJournalField(useFJournal.get());
                     abbreviationsPreferences.setJournalAbbreviationDir(directoryPath.get());
 
-
                     if (shouldWriteLists) {
                         saveJournalAbbreviationFiles();
                         shouldWriteLists = false;

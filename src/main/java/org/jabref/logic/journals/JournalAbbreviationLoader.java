@@ -73,10 +73,8 @@ public class JournalAbbreviationLoader {
         return repository;
     }
 
-
     public static JournalAbbreviationRepository loadBuiltInRepository() {
         return loadRepository(new JournalAbbreviationPreferences(Collections.emptyList(), true, new SimpleStringProperty(Directories.getJournalAbbreviationsDirectory().toString() )));
     }
-
 
 }
